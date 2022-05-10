@@ -1,0 +1,107 @@
+body {
+    background-color: blue;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "small medium large";    
+}
+.small { grid-area: small; }
+.medium { grid-area: medium; }
+.large { grid-area: large; }
+
+div.small{
+    background-color: aqua;
+}
+div.medium{
+    background-color: bisque;
+}
+div.large{
+    background-color: brown;
+}
+/* div.small{
+    display: none;
+}
+div.medium{
+    display: none;
+} */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: green;
+        font-size: 12px;
+        color: white;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "small small medium"
+        "large large large";      
+    } 
+    .large { grid-area: large; }
+    .small { grid-area: small; }
+    .medium { grid-area: medium; }   
+    div.small{
+        background-color: aqua;
+    }
+    div.medium{
+        background-color: bisque
+    }
+    div.large{
+        background-color: brown;
+    }
+    /* div.medium{
+        display: block;
+    }
+    div.large{
+        display: none;
+    }
+    div.small{
+        display: none;
+    } */
+}
+
+ 
+@media screen and (max-width: 410px) {
+    body {
+        background-color: red;
+        font-size: 10px;
+        color: blue;
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "small"
+        "medium"
+        "large"; 
+        justify-items: center;  
+    }
+    .small { grid-area: small; }
+    .medium { grid-area: medium; }
+    .large { grid-area: large; }
+       
+    div.small{
+        background-color: aqua;
+    }
+    div.medium{
+        background-color: bisque
+    }
+    div.large{
+        background-color: brown;
+    }
+    /* div.small{
+        display: block;
+    }
+    div.medium{
+        display: none;
+    }
+    div.large{
+        display: none;
+    }  */
+}
